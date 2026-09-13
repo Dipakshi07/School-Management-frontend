@@ -14,7 +14,7 @@ import {
 
 import "./NewsManagement.css";
 
-const API_URL = "http://localhost:5000/api/news";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api/news";
 
 const getNewsIcon = (category) => {
   switch (category) {

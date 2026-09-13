@@ -11,7 +11,7 @@ import {
   Search
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/notices";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api/notices";
 
 const NoticesManagement = () => {
   const [notices, setNotices] = useState([]);

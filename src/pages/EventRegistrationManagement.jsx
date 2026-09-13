@@ -17,7 +17,7 @@ import {
 import "./EventRegistrationManagement.css";
 
 const API_URL =
-  "http://localhost:5000/api/event-registrations";
+  "https://school-management-backend-jcoe.onrender.com/api/event-registrations";
 
 const EventRegistrationManagement = () => {
   const [registrations, setRegistrations] = useState([]);

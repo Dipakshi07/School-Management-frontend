@@ -18,7 +18,7 @@ import {
 
 import "./TeacherManagement.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api";
 
 const emptyForm = {
   name: "",

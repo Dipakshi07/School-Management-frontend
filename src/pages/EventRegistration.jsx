@@ -63,7 +63,7 @@ const EventRegistration = () => {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/event-registrations",
+        "https://school-management-backend-jcoe.onrender.com/api/event-registrations",
         {
           method: "POST",
           headers: {

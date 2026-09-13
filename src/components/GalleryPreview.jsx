@@ -11,7 +11,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/gallery";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api/gallery";
 
 const GalleryPreview = () => {
 

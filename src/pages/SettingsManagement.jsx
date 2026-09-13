@@ -19,7 +19,7 @@ import {
 
 import "./SettingsManagement.css";
 
-const API_URL = "http://localhost:5000/api/admin/settings";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api/admin/settings";
 
 const SettingsManagement = () => {
   const [activeTab, setActiveTab] = useState("profile");

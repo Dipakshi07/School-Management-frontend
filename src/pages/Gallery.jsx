@@ -12,7 +12,7 @@ import {
 
 import "./Gallery.css";
 
-const API_URL = "http://localhost:5000/api/gallery";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api/gallery";
 
 const Gallery = () => {
   const [gallery, setGallery] = useState([]);

@@ -14,7 +14,7 @@ import {
 import "./AchievementManagement.css";
 
 const API_URL =
-  "http://localhost:5000/api/achievements";
+  "https://school-management-backend-jcoe.onrender.com/api/achievements";
 
 const AchievementManagement = () => {
   const [achievements, setAchievements] =

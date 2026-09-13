@@ -80,7 +80,7 @@ const AdmissionsManagement = ({ onAdmissionUpdated }) => {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/admissions",
+        "https://school-management-backend-jcoe.onrender.com/api/admin/admissions",
         {
           method: "GET",
           headers: {

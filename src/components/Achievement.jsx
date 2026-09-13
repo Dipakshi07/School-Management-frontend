@@ -12,7 +12,7 @@ import {
 import "./Achievement.css";
 
 const API_URL =
-  "http://localhost:5000/api/achievements";
+  "https://school-management-backend-jcoe.onrender.com/api/achievements";
 
 // ==========================================
 // ICON HELPER
