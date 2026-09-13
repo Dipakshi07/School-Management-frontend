@@ -12,7 +12,7 @@ import {
 
 import "./Dashboard.css";
 
-const API_URL = "http://localhost:5000/api/admin/students";
+const API_URL = "https://school-management-backend-jcoe.onrender.com/api/admin/students";
 
 /* =====================================================
    EMPTY FORM
