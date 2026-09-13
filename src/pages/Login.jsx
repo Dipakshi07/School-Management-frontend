@@ -61,7 +61,7 @@ const Login = () => {
       // =====================================
 
       const response = await fetch(
-        "hhttps://school-management-backend-jcoe.onrender.com/api/auth/login",
+        "https://school-management-backend-jcoe.onrender.com/api/auth/login",
         {
           method: "POST",
 
