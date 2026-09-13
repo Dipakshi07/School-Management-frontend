@@ -1,0 +1,1051 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.inner-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+  position: relative;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px 90px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(37, 99, 235, 0.28),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(245, 158, 11, 0.16),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #071a3d 0%,
+      #0b2b63 50%,
+      #123f82 100%
+    );
+
+  isolation: isolate;
+}
+
+
+/* Decorative glow */
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+
+  top: -220px;
+  right: -120px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.025),
+    0 0 0 90px rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+}
+
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  bottom: -80px;
+  left: -50px;
+
+  border-radius: 50%;
+
+  background: rgba(245, 158, 11, 0.08);
+  filter: blur(4px);
+
+  pointer-events: none;
+}
+
+
+.page-hero > div {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+
+/* Hero eyebrow */
+
+.page-hero span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding: 9px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  color: #fbbf24;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+
+.page-hero span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #fbbf24;
+
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.8);
+}
+
+
+/* Hero heading */
+
+.page-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+
+.page-hero h1::first-line {
+  color: #ffffff;
+}
+
+
+/* Hero paragraph */
+
+.page-hero p {
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ABOUT INTRODUCTION
+========================================================= */
+
+.about-introduction {
+  position: relative;
+
+  max-width: 1180px;
+  margin: 0 auto;
+
+  padding: 110px 24px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+
+  gap: 75px;
+}
+
+
+/* Image */
+
+.about-intro-image {
+  position: relative;
+}
+
+
+.about-intro-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 85%;
+  height: 85%;
+
+  left: -18px;
+  bottom: -18px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #f59e0b
+  );
+
+  z-index: 0;
+}
+
+
+.about-intro-image::after {
+  content: "";
+
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  right: -28px;
+  top: -28px;
+
+  border-radius: 50%;
+
+  border: 2px dashed rgba(37, 99, 235, 0.22);
+
+  z-index: 0;
+}
+
+
+.about-intro-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.16);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+.about-intro-image:hover img {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 32px 70px rgba(15, 23, 42, 0.2);
+}
+
+
+/* Content */
+
+.about-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.about-intro-content .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 14px;
+
+  color: #2563eb;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+
+.about-intro-content .section-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b
+  );
+
+  border-radius: 10px;
+}
+
+
+.about-intro-content h2 {
+  margin: 0 0 22px;
+
+  color: #0f172a;
+
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+
+.about-intro-content h2 span {
+  display: block;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #1d4ed8,
+    #f59e0b
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.about-intro-content p {
+  margin: 0 0 15px;
+
+  color: #64748b;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CHECK LIST
+========================================================= */
+
+.about-check-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px 18px;
+
+  margin-top: 28px;
+}
+
+
+.about-check-list > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+
+  color: #334155;
+
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+
+.about-check-list svg {
+  flex-shrink: 0;
+
+  color: #2563eb;
+
+  stroke-width: 2.5;
+}
+
+
+.about-check-list > div:hover svg {
+  color: #f59e0b;
+
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   MISSION SECTION
+========================================================= */
+
+.mission-section {
+  position: relative;
+
+  padding: 110px 24px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(37, 99, 235, 0.055),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(245, 158, 11, 0.05),
+      transparent 25%
+    ),
+    #f8fafc;
+}
+
+
+.mission-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -80px;
+  top: 40px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(37, 99, 235, 0.08);
+
+  pointer-events: none;
+}
+
+
+/* Mission grid */
+
+.mission-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1180px;
+
+  margin: 55px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* Mission card */
+
+.mission-card {
+  position: relative;
+
+  padding: 38px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.mission-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #60a5fa,
+    #f59e0b
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.4s ease;
+}
+
+
+.mission-card:hover {
+  transform: translateY(-9px);
+
+  border-color: rgba(37, 99, 235, 0.2);
+
+  box-shadow:
+    0 25px 55px rgba(15, 23, 42, 0.12);
+}
+
+
+.mission-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* Mission icon */
+
+.mission-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 17px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.22);
+
+  transition:
+    transform 0.35s ease,
+    border-radius 0.35s ease;
+}
+
+
+.mission-card:nth-child(2) .mission-icon {
+  background: linear-gradient(
+    135deg,
+    #0ea5e9,
+    #2563eb
+  );
+}
+
+
+.mission-card:nth-child(3) .mission-icon {
+  background: linear-gradient(
+    135deg,
+    #f59e0b,
+    #d97706
+  );
+
+  box-shadow:
+    0 12px 25px rgba(245, 158, 11, 0.22);
+}
+
+
+.mission-card:hover .mission-icon {
+  transform: rotate(-5deg) scale(1.06);
+
+  border-radius: 20px;
+}
+
+
+.mission-card h3 {
+  margin: 0 0 12px;
+
+  color: #0f172a;
+
+  font-size: 1.35rem;
+  font-weight: 750;
+}
+
+
+.mission-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRINCIPAL SECTION
+========================================================= */
+
+.principal-section {
+  position: relative;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 110px 24px;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+
+  align-items: center;
+
+  gap: 75px;
+}
+
+
+/* Principal image */
+
+.principal-image {
+  position: relative;
+}
+
+
+.principal-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 18px;
+  left: 18px;
+
+  border-radius: 25px;
+
+  border: 2px solid rgba(37, 99, 235, 0.15);
+
+  z-index: 0;
+}
+
+
+.principal-image::after {
+  content: "LEADERSHIP";
+
+  position: absolute;
+
+  left: -25px;
+  bottom: 30px;
+
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+
+  z-index: 2;
+}
+
+
+.principal-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 510px;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.15);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+.principal-image:hover img {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 35px 75px rgba(15, 23, 42, 0.2);
+}
+
+
+/* Principal content */
+
+.principal-content {
+  position: relative;
+}
+
+
+.principal-content .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  color: #2563eb;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+
+.principal-content .section-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b
+  );
+}
+
+
+.principal-content h2 {
+  margin: 0 0 25px;
+
+  color: #0f172a;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+}
+
+
+.principal-content h2 span {
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #1d4ed8,
+    #f59e0b
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.principal-content p {
+  margin: 0 0 17px;
+
+  color: #64748b;
+
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   PRINCIPAL SIGNATURE
+========================================================= */
+
+.principal-signature {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+
+.principal-signature strong {
+  color: #0f172a;
+
+  font-family: Georgia, serif;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+
+.principal-signature span {
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-introduction {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    max-width: 800px;
+  }
+
+  .about-intro-image {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .about-intro-content {
+    text-align: center;
+  }
+
+  .about-intro-content .section-eyebrow {
+    justify-content: center;
+  }
+
+  .about-check-list {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+  }
+
+
+  .mission-grid {
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 800px;
+  }
+
+  .mission-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 390px;
+    width: 100%;
+
+    justify-self: center;
+  }
+
+
+  .principal-section {
+    grid-template-columns: 1fr;
+
+    max-width: 800px;
+
+    gap: 55px;
+  }
+
+  .principal-image {
+    max-width: 550px;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .page-hero {
+    min-height: 410px;
+
+    padding: 85px 20px 70px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+  }
+
+  .page-hero p {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+
+  .about-introduction {
+    padding: 75px 20px;
+  }
+
+  .about-intro-image img {
+    height: 380px;
+
+    border-radius: 20px;
+  }
+
+  .about-intro-image::before {
+    left: -10px;
+    bottom: -10px;
+
+    border-radius: 20px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-check-list {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    text-align: left;
+  }
+
+
+  .mission-section {
+    padding: 75px 20px;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 40px;
+  }
+
+  .mission-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .mission-card {
+    padding: 30px 25px;
+  }
+
+
+  .principal-section {
+    padding: 75px 20px;
+  }
+
+  .principal-image img {
+    height: 420px;
+
+    border-radius: 20px;
+  }
+
+  .principal-image::before {
+    top: 12px;
+    left: 12px;
+
+    border-radius: 20px;
+  }
+
+  .principal-image::after {
+    left: -10px;
+    bottom: 20px;
+  }
+
+  .principal-content h2 {
+    font-size: 2rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .page-hero {
+    min-height: 380px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .page-hero span {
+    font-size: 0.65rem;
+
+    padding: 8px 13px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.15rem;
+  }
+
+
+  .about-introduction,
+  .mission-section,
+  .principal-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+
+  .about-intro-image img {
+    height: 320px;
+  }
+
+
+  .mission-card {
+    padding: 26px 22px;
+  }
+
+
+  .principal-image img {
+    height: 360px;
+  }
+
+  .principal-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-intro-image img,
+  .mission-card,
+  .mission-icon,
+  .principal-image img {
+    transition: none;
+  }
+
+  .about-intro-image:hover img,
+  .mission-card:hover,
+  .principal-image:hover img {
+    transform: none;
+  }
+}

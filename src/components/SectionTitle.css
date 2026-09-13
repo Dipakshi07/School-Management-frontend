@@ -1,0 +1,272 @@
+/* =========================================
+   SECTION TITLE
+   BRIGHT FUTURE INTERNATIONAL SCHOOL
+   ========================================= */
+
+.section-title {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+/* =========================================
+   CENTER ALIGNMENT
+   ========================================= */
+
+.section-title.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title.center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   LEFT ALIGNMENT
+   ========================================= */
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-title.left p {
+  margin-left: 0;
+}
+
+/* =========================================
+   EYEBROW
+   ========================================= */
+
+.section-title .section-eyebrow {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 12px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Decorative line before eyebrow */
+
+.section-title .section-eyebrow::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b
+  );
+}
+
+/* For left-aligned titles */
+
+.section-title.left .section-eyebrow {
+  justify-content: flex-start;
+}
+
+/* =========================================
+   MAIN HEADING
+   ========================================= */
+
+.section-title h2 {
+  position: relative;
+
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.2px;
+}
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.section-title p {
+  max-width: 680px;
+
+  margin-top: 15px;
+  margin-bottom: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   CENTER TITLE WIDTH
+   ========================================= */
+
+.section-title.center h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   SUBTLE GOLD ACCENT
+   ========================================= */
+
+.section-title h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin-top: 15px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b
+  );
+}
+
+/* Center accent */
+
+.section-title.center h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   HOVER / PREMIUM DETAIL
+   ========================================= */
+
+.section-title .section-eyebrow::before {
+  transition: width 0.3s ease;
+}
+
+.section-title:hover .section-eyebrow::before {
+  width: 38px;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .section-title h2 {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+
+  .section-title p {
+    max-width: 600px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .section-title .section-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.7px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 550px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 29px;
+
+    line-height: 1.2;
+  }
+
+  .section-title h2::after {
+    width: 38px;
+    height: 2px;
+
+    margin-top: 12px;
+  }
+
+  .section-title p {
+    margin-top: 12px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .section-title .section-eyebrow {
+    gap: 7px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .section-title .section-eyebrow::before {
+    width: 22px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 380px) {
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .section-title p {
+    font-size: 12px;
+  }
+
+  .section-title .section-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .section-title *,
+  .section-title *::before,
+  .section-title *::after {
+    transition: none !important;
+  }
+}

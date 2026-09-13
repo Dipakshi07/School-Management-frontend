@@ -1,0 +1,480 @@
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+  width: 100%;
+  padding: 90px 20px;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(59, 130, 246, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(245, 158, 11, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #0f172a 0%,
+      #172554 50%,
+      #0f172a 100%
+    );
+}
+
+
+/* =========================================
+   DECORATIVE CIRCLES
+========================================= */
+
+.cta-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  top: -170px;
+  left: -100px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.025),
+    0 0 0 90px rgba(255, 255, 255, 0.018);
+}
+
+.cta-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -130px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(245, 158, 11, 0.08);
+
+  filter: blur(2px);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.cta-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.cta-content {
+  position: relative;
+
+  padding: 70px 60px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.045)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  overflow: hidden;
+}
+
+
+/* Inner glow */
+
+.cta-content::before {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  top: -150px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.20);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.cta-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 17px;
+
+  margin-bottom: 22px;
+
+  border-radius: 50px;
+
+  background: rgba(245, 158, 11, 0.12);
+
+  border: 1px solid rgba(245, 158, 11, 0.25);
+
+  color: #fbbf24;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.cta-content h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 auto 20px;
+
+  max-width: 700px;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* Highlighted heading */
+
+.cta-content h2 span {
+  display: block;
+
+  margin-top: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #fbbf24
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.cta-content p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin: 0 auto 34px;
+
+  color: rgba(255, 255, 255, 0.70);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.cta-buttons {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================
+   COMMON BUTTON
+========================================= */
+
+.cta-primary,
+.cta-secondary {
+  min-height: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 24px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.cta-primary {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.cta-primary:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  box-shadow:
+    0 16px 35px rgba(37, 99, 235, 0.45);
+}
+
+
+/* Arrow animation */
+
+.cta-primary svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-primary:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.cta-secondary {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cta-secondary:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border-color: rgba(255, 255, 255, 0.30);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Phone icon */
+
+.cta-secondary svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-secondary:hover svg {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .cta-section {
+    padding: 70px 18px;
+  }
+
+  .cta-content {
+    padding: 55px 35px;
+
+    border-radius: 25px;
+  }
+
+  .cta-content h2 {
+    font-size: 40px;
+  }
+
+  .cta-content p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .cta-section {
+    padding: 55px 14px;
+  }
+
+  .cta-content {
+    padding: 45px 22px;
+
+    border-radius: 22px;
+  }
+
+  .cta-label {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    padding: 7px 13px;
+
+    margin-bottom: 18px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.8px;
+  }
+
+  .cta-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+
+    min-height: 50px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .cta-section {
+    padding: 45px 12px;
+  }
+
+  .cta-content {
+    padding: 38px 18px;
+  }
+
+  .cta-content h2 {
+    font-size: 28px;
+  }
+
+  .cta-content p {
+    font-size: 13px;
+  }
+
+}

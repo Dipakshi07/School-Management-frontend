@@ -1,0 +1,176 @@
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: #f8fafc;
+  color: #0f172a;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(37, 99, 235, 0.035),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(245, 158, 11, 0.035),
+      transparent 28%
+    );
+
+  /* Prevent content from touching fixed/sticky elements */
+  isolation: isolate;
+}
+
+
+/* =========================================
+   PAGE TRANSITION SUPPORT
+========================================= */
+
+.main-content > * {
+  width: 100%;
+  animation: pageFadeIn 0.45s ease both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   COMMON SECTION RESET
+========================================= */
+
+.main-content section {
+  width: 100%;
+  position: relative;
+}
+
+
+/* =========================================
+   LINKS / BUTTONS
+========================================= */
+
+.main-layout a,
+.main-layout button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.main-layout::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-layout::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.main-layout::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  border-radius: 20px;
+}
+
+.main-layout::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #1d4ed8,
+    #f59e0b
+  );
+}
+
+
+/* =========================================
+   SELECTION
+========================================= */
+
+.main-layout ::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: #0f172a;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .main-content {
+    background:
+      radial-gradient(
+        circle at 0% 10%,
+        rgba(37, 99, 235, 0.03),
+        transparent 35%
+      ),
+      #f8fafc;
+  }
+
+  .main-content > * {
+    animation-duration: 0.35s;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .main-layout {
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content > * {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .main-content > * {
+    animation: none;
+  }
+}

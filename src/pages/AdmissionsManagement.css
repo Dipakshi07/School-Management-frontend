@@ -1,0 +1,714 @@
+/* =========================================
+   ADMISSIONS MANAGEMENT
+========================================= */
+
+.admissions-management {
+  width: 100%;
+  animation: admissionsFadeIn 0.3s ease;
+}
+
+@keyframes admissionsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admissions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.admissions-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admissions-heading-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  flex-shrink: 0;
+}
+
+.admissions-heading h2 {
+  margin: 0 0 5px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.admissions-heading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.admissions-refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 11px 17px;
+
+  background: #4f46e5;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admissions-refresh-btn:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+}
+
+.admissions-refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.admissions-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  margin-bottom: 22px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+.admissions-error span {
+  flex: 1;
+}
+
+.admissions-error button {
+  border: none;
+  background: transparent;
+
+  color: #b91c1c;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.admission-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 25px;
+}
+
+.admission-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.summary-icon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admission-summary-card.total
+  .summary-icon {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.admission-summary-card.pending
+  .summary-icon {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.admission-summary-card.approved
+  .summary-icon {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.admission-summary-card.declined
+  .summary-icon {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.admission-summary-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.admission-summary-card strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 23px;
+  line-height: 1;
+}
+
+/* =========================================
+   ADMISSION LIST
+========================================= */
+
+.admissions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================================
+   ADMISSION CARD
+========================================= */
+
+.admission-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admission-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.admission-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #eef0f3;
+
+  background: #fafbff;
+}
+
+.student-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.student-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.application-number {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.student-title h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admission-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admission-status.pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.admission-status.approved {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.admission-status.declined {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.admission-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 0;
+
+  padding: 6px 22px 10px;
+}
+
+.admission-detail {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 16px 8px;
+
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.admission-detail:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+.admission-detail.full-width {
+  grid-column: 1 / -1;
+}
+
+.admission-detail.full-width:last-child {
+  border-bottom: none;
+}
+
+.detail-icon {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7ff;
+  color: #4f46e5;
+
+  flex-shrink: 0;
+}
+
+.admission-detail span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.admission-detail strong {
+  display: block;
+
+  color: #1f2937;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.admission-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 16px 22px;
+
+  border-top: 1px solid #eef0f3;
+
+  background: #fafafa;
+}
+
+.submitted-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.admission-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.approve-btn,
+.decline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.approve-btn {
+  border: 1px solid #a7f3d0;
+
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.approve-btn:hover {
+  background: #d1fae5;
+
+  transform: translateY(-1px);
+}
+
+.decline-btn {
+  border: 1px solid #fecaca;
+
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.decline-btn:hover {
+  background: #fee2e2;
+
+  transform: translateY(-1px);
+}
+
+.approve-btn:disabled,
+.decline-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.admissions-loading {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #6b7280;
+}
+
+.admissions-loading p {
+  margin-top: 15px;
+
+  font-size: 14px;
+}
+
+.admissions-spinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #e5e7eb;
+  border-top-color: #4f46e5;
+
+  border-radius: 50%;
+
+  animation: admissionSpin 0.8s linear infinite;
+}
+
+@keyframes admissionSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.admissions-empty {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px;
+
+  background: white;
+
+  border: 1px dashed #d1d5db;
+
+  border-radius: 16px;
+}
+
+.empty-icon {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  margin-bottom: 18px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.admissions-empty h3 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 19px;
+}
+
+.admissions-empty p {
+  margin: 0 0 20px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .admission-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .admissions-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admission-details {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-detail.full-width {
+    grid-column: auto;
+  }
+
+  .admission-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .admission-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admission-actions {
+    width: 100%;
+  }
+
+  .approve-btn,
+  .decline-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .admission-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .admissions-heading h2 {
+    font-size: 20px;
+  }
+
+  .admissions-heading p {
+    font-size: 12px;
+  }
+
+  .admission-card-header {
+    padding: 16px;
+  }
+
+  .admission-details {
+    padding: 5px 14px;
+  }
+
+  .admission-card-footer {
+    padding: 14px 16px;
+  }
+
+  .admission-actions {
+    flex-direction: column;
+  }
+
+  .approve-btn,
+  .decline-btn {
+    width: 100%;
+  }
+}

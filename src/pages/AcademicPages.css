@@ -1,0 +1,322 @@
+.academic-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* ==============================
+   COMMON CONTAINER
+============================== */
+
+.academic-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.academic-hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background:
+    linear-gradient(
+      135deg,
+      #0f2a44,
+      #174f78
+    );
+  color: white;
+}
+
+.curriculum-hero {
+  background:
+    linear-gradient(
+      135deg,
+      #163d32,
+      #28735d
+    );
+}
+
+.departments-hero {
+  background:
+    linear-gradient(
+      135deg,
+      #38204f,
+      #67418a
+    );
+}
+
+.academic-hero-content {
+  max-width: 800px;
+}
+
+.academic-hero-content span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
+.academic-hero-content h1 {
+  margin: 0 0 20px;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.1;
+}
+
+.academic-hero-content p {
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 17px;
+  line-height: 1.8;
+  opacity: 0.92;
+}
+
+/* ==============================
+   INTRO
+============================== */
+
+.academic-intro {
+  padding: 90px 0 60px;
+  text-align: center;
+}
+
+.academic-intro .academic-container {
+  max-width: 850px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.academic-intro h2 {
+  margin: 0 0 20px;
+  font-size: clamp(30px, 4vw, 44px);
+  color: #172b4d;
+}
+
+.academic-intro p {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #667085;
+}
+
+/* ==============================
+   PROGRAMS
+============================== */
+
+.programs-section {
+  padding: 40px 0 100px;
+  background: #f7f9fc;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ==============================
+   PROGRAM CARD
+============================== */
+
+.program-card,
+.department-card {
+  background: white;
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid #e7ebf0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.program-card:hover,
+.department-card:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 18px 45px rgba(16, 24, 40, 0.1);
+  border-color: #b8c9dc;
+}
+
+.program-icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #edf4fb;
+  color: #1769aa;
+  margin-bottom: 22px;
+}
+
+.program-class {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1769aa;
+  background: #edf4fb;
+  padding: 6px 11px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+}
+
+.program-card h3,
+.department-card h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  color: #172b4d;
+}
+
+.program-card p,
+.department-card p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.75;
+  font-size: 14.5px;
+}
+
+/* ==============================
+   DEPARTMENT
+============================== */
+
+.department-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.department-subjects {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0f4;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1769aa;
+  font-weight: 600;
+}
+
+/* ==============================
+   PAGE SECTION TITLE
+============================== */
+
+.page-section-title {
+  text-align: center;
+  color: #172b4d;
+  font-size: 34px;
+  margin: 0 0 40px;
+}
+
+/* ==============================
+   LEARNING APPROACH
+============================== */
+
+.learning-approach {
+  padding: 90px 0;
+  background: white;
+  text-align: center;
+}
+
+.learning-approach h2 {
+  margin: 0 0 45px;
+  color: #172b4d;
+  font-size: 38px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.approach-grid > div {
+  padding: 28px;
+  border-radius: 16px;
+  background: #f7f9fc;
+  border: 1px solid #e7ebf0;
+}
+
+.approach-grid h3 {
+  margin: 0 0 10px;
+  color: #172b4d;
+}
+
+.approach-grid p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.7;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+  .programs-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .approach-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .academic-hero {
+    min-height: 330px;
+    padding: 60px 18px;
+  }
+
+  .academic-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .academic-hero-content p {
+    font-size: 15px;
+  }
+
+  .academic-intro {
+    padding: 65px 0 40px;
+  }
+
+  .programs-section {
+    padding: 30px 0 70px;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card,
+  .department-card {
+    padding: 25px;
+  }
+
+  .learning-approach {
+    padding: 65px 0;
+  }
+
+  .learning-approach h2 {
+    font-size: 30px;
+  }
+}

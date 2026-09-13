@@ -1,0 +1,392 @@
+
+/* =========================================
+   ACHIEVEMENT SECTION
+========================================= */
+
+.achievement-section {
+  width: 100%;
+  padding: 100px 20px;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(37, 99, 235, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(245, 158, 11, 0.08),
+      transparent 30%
+    ),
+    #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.achievement-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.achievement-header {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+  margin-bottom: 18px;
+
+  border-radius: 50px;
+
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.14);
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.achievement-header h2 {
+  margin: 0 0 18px;
+
+  color: #0f172a;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.achievement-header p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   ACHIEVEMENT GRID
+========================================= */
+
+.achievement-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   ACHIEVEMENT CARD
+========================================= */
+
+.achievement-card {
+  position: relative;
+
+  padding: 34px 28px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid rgba(226, 232, 240, 0.9);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.05),
+    0 2px 8px rgba(15, 23, 42, 0.03);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  overflow: hidden;
+}
+
+
+/* Decorative top line */
+
+.achievement-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* Decorative background circle */
+
+.achievement-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.05);
+
+  transition: transform 0.4s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(37, 99, 235, 0.25);
+
+  box-shadow:
+    0 22px 45px rgba(15, 23, 42, 0.10),
+    0 8px 20px rgba(37, 99, 235, 0.08);
+}
+
+.achievement-card:hover::before {
+  transform: scaleX(1);
+}
+
+.achievement-card:hover::after {
+  transform: scale(1.5);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.achievement-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #eff6ff,
+    #dbeafe
+  );
+
+  color: #2563eb;
+
+  border: 1px solid rgba(37, 99, 235, 0.12);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.10);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+  transform: translateY(-3px) rotate(-4deg);
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.achievement-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 12px;
+
+  color: #0f172a;
+
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 750;
+
+  transition: color 0.3s ease;
+}
+
+.achievement-card:hover h3 {
+  color: #2563eb;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.achievement-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .achievement-section {
+    padding: 80px 20px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .achievement-header {
+    margin-bottom: 45px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+
+  .achievement-section {
+    padding: 70px 16px;
+  }
+
+  .achievement-header {
+    margin-bottom: 38px;
+  }
+
+  .section-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 7px 13px;
+  }
+
+  .achievement-header h2 {
+    font-size: 32px;
+    letter-spacing: -0.7px;
+  }
+
+  .achievement-header p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .achievement-card {
+    padding: 28px 24px;
+    border-radius: 19px;
+  }
+
+  .achievement-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 20px;
+  }
+
+  .achievement-card h3 {
+    font-size: 18px;
+  }
+
+  .achievement-card p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .achievement-section {
+    padding: 60px 14px;
+  }
+
+  .achievement-header h2 {
+    font-size: 28px;
+  }
+
+  .achievement-card {
+    padding: 25px 20px;
+  }
+
+}

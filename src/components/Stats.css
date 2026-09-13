@@ -1,0 +1,444 @@
+/* =========================================
+   STATS SECTION
+   BRIGHT FUTURE INTERNATIONAL SCHOOL
+   ========================================= */
+
+.stats-section {
+  position: relative;
+  width: 100%;
+  padding: 35px 0;
+
+  background:
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(37, 99, 235, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 50%,
+      rgba(245, 158, 11, 0.06),
+      transparent 30%
+    ),
+    #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.stats-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.08);
+
+  overflow: hidden;
+}
+
+/* =========================================
+   STAT CARD
+   ========================================= */
+
+.stat-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 125px;
+
+  padding: 25px 28px;
+
+  background: #ffffff;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Vertical divider */
+
+.stat-card:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 25px;
+  right: 0;
+
+  width: 1px;
+  height: calc(100% - 50px);
+
+  background: rgba(15, 23, 42, 0.09);
+}
+
+/* Hover */
+
+.stat-card:hover {
+  background: #f8fbff;
+}
+
+.stat-card:hover .stat-icon {
+  transform: translateY(-4px) rotate(-3deg);
+}
+
+/* =========================================
+   STAT ICON
+   ========================================= */
+
+.stat-icon {
+  flex-shrink: 0;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eff6ff,
+      #dbeafe
+    );
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 15px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  border-color: transparent;
+
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.25);
+}
+
+.stat-icon svg {
+  stroke-width: 2;
+}
+
+/* =========================================
+   STAT CONTENT
+   ========================================= */
+
+.stat-content {
+  min-width: 0;
+}
+
+.stat-content h3 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 28px;
+  font-weight: 850;
+
+  line-height: 1;
+
+  letter-spacing: -0.8px;
+
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-content h3 {
+  color: #2563eb;
+}
+
+.stat-content p {
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   GOLD ACCENT
+   ========================================= */
+
+.stat-card:nth-child(3) .stat-icon {
+  color: #d97706;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffbeb,
+      #fef3c7
+    );
+
+  border-color: #fde68a;
+}
+
+.stat-card:nth-child(3):hover .stat-icon {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f59e0b,
+      #d97706
+    );
+
+  border-color: transparent;
+
+  box-shadow:
+    0 10px 22px rgba(245, 158, 11, 0.25);
+}
+
+/* =========================================
+   TOP DECORATIVE LINE
+   ========================================= */
+
+.stats-container::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+
+  width: 84%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #2563eb,
+      #f59e0b,
+      #2563eb,
+      transparent
+    );
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    border-radius: 20px;
+  }
+
+  .stat-card {
+    min-height: 115px;
+
+    padding: 22px;
+  }
+
+  /* Remove right divider from 2nd & 4th cards */
+
+  .stat-card:nth-child(2)::after,
+  .stat-card:nth-child(4)::after {
+    display: none;
+  }
+
+  /* Add horizontal divider */
+
+  .stat-card:nth-child(1)::before,
+  .stat-card:nth-child(2)::before {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 22px;
+    right: 22px;
+
+    height: 1px;
+
+    background: rgba(15, 23, 42, 0.08);
+  }
+
+  .stat-content h3 {
+    font-size: 26px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+  .stats-section {
+    padding: 25px 0;
+  }
+
+  .stats-container {
+    width: calc(100% - 30px);
+
+    grid-template-columns: 1fr;
+
+    border-radius: 18px;
+  }
+
+  .stat-card {
+    min-height: 95px;
+
+    padding: 18px 20px;
+
+    gap: 15px;
+  }
+
+  /* Remove all vertical dividers */
+
+  .stat-card:not(:last-child)::after {
+    display: none;
+  }
+
+  /* Horizontal dividers */
+
+  .stat-card:not(:last-child)::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+
+    width: auto;
+    height: 1px;
+
+    background: rgba(15, 23, 42, 0.08);
+  }
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+  }
+
+  .stat-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .stat-content h3 {
+    font-size: 24px;
+  }
+
+  .stat-content p {
+    margin-top: 6px;
+
+    font-size: 11px;
+  }
+
+  .stats-container::before {
+    left: 6%;
+    width: 88%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+  .stats-container {
+    width: calc(100% - 24px);
+  }
+
+  .stat-card {
+    min-height: 88px;
+
+    padding: 15px 16px;
+
+    gap: 13px;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 11px;
+  }
+
+  .stat-content h3 {
+    font-size: 22px;
+  }
+
+  .stat-content p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL DEVICES
+   ========================================= */
+
+@media (max-width: 330px) {
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stat-content h3 {
+    font-size: 20px;
+  }
+
+  .stat-content p {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .stats-section *,
+  .stats-section *::before,
+  .stats-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

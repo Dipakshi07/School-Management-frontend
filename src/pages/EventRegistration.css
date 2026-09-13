@@ -1,0 +1,706 @@
+
+/* =========================================
+   EVENT REGISTRATION PAGE
+========================================= */
+
+.event-registration-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  color: #172033;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.event-registration-hero {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a 0%,
+      #172554 50%,
+      #1d4ed8 100%
+    );
+}
+
+.event-registration-hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  top: -250px;
+  left: -100px;
+}
+
+.event-registration-hero::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.08);
+  bottom: -230px;
+  right: -100px;
+}
+
+.event-registration-hero > div {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.event-registration-hero span {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 50px;
+
+  color: #dbeafe;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+}
+
+.event-registration-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.12;
+  font-weight: 800;
+
+  max-width: 850px;
+}
+
+.event-registration-hero p {
+  margin: 20px auto 0;
+
+  color: #cbd5e1;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  max-width: 650px;
+}
+
+
+/* =========================================
+   REGISTRATION SECTION
+========================================= */
+
+.registration-section {
+  padding: 80px 20px 100px;
+}
+
+.registration-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 30px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   EVENT INFORMATION
+========================================= */
+
+.event-info {
+  position: sticky;
+  top: 100px;
+
+  padding: 35px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+.registration-label {
+  display: inline-block;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 12px;
+}
+
+.event-info h2 {
+  margin: 0 0 20px;
+
+  color: #0f172a;
+
+  font-size: 29px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.event-info-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  padding: 11px 15px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #1d4ed8;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.event-info-date svg {
+  flex-shrink: 0;
+}
+
+.event-info p {
+  margin: 0 0 28px;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BACK TO NEWS BUTTON
+========================================= */
+
+.back-news-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 19px;
+
+  border-radius: 10px;
+
+  border: 1px solid #dbe3ee;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.back-news-btn:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-color: #93c5fd;
+
+  transform: translateX(-3px);
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.registration-form-card {
+  padding: 38px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+.registration-form-card > h2 {
+  margin: 0 0 8px;
+
+  color: #0f172a;
+
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.registration-form-card > p {
+  margin: 0 0 30px;
+
+  color: #64748b;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.registration-success {
+  margin-bottom: 22px;
+
+  padding: 15px 18px;
+
+  border-radius: 12px;
+
+  background: #ecfdf5;
+
+  border: 1px solid #a7f3d0;
+
+  color: #047857;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.registration-error {
+  margin-bottom: 22px;
+
+  padding: 15px 18px;
+
+  border-radius: 12px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  color: #dc2626;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.registration-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.registration-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.registration-form-group label {
+  color: #1e293b;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   INPUT / SELECT / TEXTAREA
+========================================= */
+
+.registration-form-group input,
+.registration-form-group select,
+.registration-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 1px solid #d9e1ec;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.registration-form-group input::placeholder,
+.registration-form-group textarea::placeholder {
+  color: #9aa6b5;
+}
+
+.registration-form-group input:hover,
+.registration-form-group select:hover,
+.registration-form-group textarea:hover {
+  border-color: #93c5fd;
+}
+
+.registration-form-group input:focus,
+.registration-form-group select:focus,
+.registration-form-group textarea:focus {
+  border-color: #2563eb;
+
+  background: #fafdff;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.registration-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+/* =========================================
+   CLASS + SECTION ROW
+========================================= */
+
+.registration-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.registration-submit-btn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 5px;
+
+  padding: 15px 22px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.registration-submit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 28px rgba(37, 99, 235, 0.3);
+}
+
+.registration-submit-btn:active {
+  transform: translateY(0);
+}
+
+.registration-submit-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   EVENT NOT FOUND
+========================================= */
+
+.event-not-found {
+  width: min(600px, calc(100% - 40px));
+
+  margin: 100px auto;
+
+  padding: 50px 35px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  border: 1px solid #e5e7eb;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+.event-not-found h2 {
+  margin: 0 0 12px;
+
+  color: #0f172a;
+
+  font-size: 30px;
+}
+
+.event-not-found p {
+  margin: 0 0 25px;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.event-not-found button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.event-not-found button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .registration-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-info {
+    position: static;
+  }
+
+  .event-registration-hero {
+    min-height: 300px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .event-registration-hero {
+    min-height: 270px;
+
+    padding: 55px 18px;
+  }
+
+  .event-registration-hero span {
+    font-size: 10px;
+
+    padding: 8px 15px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .event-registration-hero h1 {
+    font-size: 30px;
+  }
+
+  .event-registration-hero p {
+    font-size: 14px;
+
+    margin-top: 15px;
+  }
+
+  .registration-section {
+    padding: 45px 15px 70px;
+  }
+
+  .registration-container {
+    gap: 20px;
+  }
+
+  .event-info,
+  .registration-form-card {
+    padding: 23px 20px;
+
+    border-radius: 17px;
+  }
+
+  .event-info h2 {
+    font-size: 23px;
+  }
+
+  .event-info p {
+    font-size: 14px;
+  }
+
+  .registration-form-card > h2 {
+    font-size: 24px;
+  }
+
+  .registration-form-card > p {
+    font-size: 14px;
+  }
+
+  .registration-row {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .registration-form-group input,
+  .registration-form-group select,
+  .registration-form-group textarea {
+    padding: 12px 13px;
+  }
+
+  .registration-submit-btn {
+    padding: 14px 18px;
+  }
+
+  .back-news-btn {
+    width: 100%;
+  }
+
+  .event-not-found {
+    width: calc(100% - 30px);
+
+    padding: 40px 20px;
+
+    margin: 70px auto;
+  }
+
+  .event-not-found h2 {
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .event-registration-hero h1 {
+    font-size: 27px;
+  }
+
+  .event-info,
+  .registration-form-card {
+    padding: 20px 16px;
+  }
+
+  .registration-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

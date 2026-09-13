@@ -1,0 +1,981 @@
+/* =========================================================
+   CAMPUS & FACILITIES PAGE
+   Bright Future International School
+   ========================================================= */
+
+.inner-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
+  overflow: hidden;
+}
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.page-hero {
+  position: relative;
+  min-height: 470px;
+  padding: 90px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 14% 25%,
+      rgba(37, 99, 235, 0.35),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 86% 75%,
+      rgba(245, 158, 11, 0.2),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #020617 0%,
+      #0f172a 48%,
+      #172554 100%
+    );
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -230px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(96, 165, 250, 0.14);
+
+  box-shadow:
+    0 0 80px rgba(37, 99, 235, 0.12),
+    inset 0 0 70px rgba(37, 99, 235, 0.05);
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 310px;
+  height: 310px;
+
+  right: -130px;
+  bottom: -160px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(251, 191, 36, 0.14);
+
+  box-shadow:
+    0 0 80px rgba(245, 158, 11, 0.1);
+}
+
+.page-hero > div {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+/* Hero Eyebrow */
+
+.page-hero > div > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+  padding: 9px 18px;
+
+  color: #bfdbfe;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(147, 197, 253, 0.22);
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.page-hero > div > span::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #fbbf24;
+
+  box-shadow:
+    0 0 12px rgba(251, 191, 36, 0.7);
+}
+
+/* Hero Heading */
+
+.page-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 1.05;
+
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* Hero Paragraph */
+
+.page-hero p {
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
+  color: #cbd5e1;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FACILITIES SECTION
+   ========================================================= */
+
+.facilities-section {
+  position: relative;
+
+  padding: 110px 24px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(37, 99, 235, 0.06),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 80%,
+      rgba(245, 158, 11, 0.06),
+      transparent 25%
+    ),
+    #f8fafc;
+}
+
+.facilities-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  left: -170px;
+  bottom: 120px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+   FACILITIES GRID
+   ========================================================= */
+
+.facilities-grid {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 100%);
+
+  margin: 65px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================================================
+   FACILITY CARD
+   ========================================================= */
+
+.facility-card {
+  position: relative;
+
+  min-height: 275px;
+
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 21px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.025);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Top accent */
+
+.facility-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #60a5fa,
+    #fbbf24
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.4s ease;
+}
+
+.facility-card:hover::before {
+  transform: scaleX(1);
+}
+
+.facility-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(37, 99, 235, 0.18);
+
+  box-shadow:
+    0 22px 45px rgba(15, 23, 42, 0.11),
+    0 8px 20px rgba(37, 99, 235, 0.05);
+}
+
+/* Decorative circle */
+
+.facility-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -65px;
+  bottom: -65px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.035);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.facility-card:hover::after {
+  transform: scale(1.3);
+
+  background: rgba(37, 99, 235, 0.06);
+}
+
+/* =========================================================
+   FACILITY ICON
+   ========================================================= */
+
+.facility-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 61px;
+  height: 61px;
+
+  margin-bottom: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 7px 18px rgba(37, 99, 235, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    background 0.35s ease;
+}
+
+.facility-icon svg {
+  width: 28px;
+  height: 28px;
+
+  stroke-width: 2;
+}
+
+.facility-card:hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  border-color: transparent;
+
+  transform: translateY(-4px) rotate(-4deg);
+}
+
+/* =========================================================
+   DIFFERENT FACILITY COLORS
+   ========================================================= */
+
+/* Science */
+
+.facility-card:nth-child(2) .facility-icon {
+  color: #7c3aed;
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+.facility-card:nth-child(2):hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6d28d9
+  );
+}
+
+/* Smart Classroom */
+
+.facility-card:nth-child(3) .facility-icon {
+  color: #0891b2;
+  background: #ecfeff;
+  border-color: #a5f3fc;
+}
+
+.facility-card:nth-child(3):hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #0891b2
+  );
+}
+
+/* Sports */
+
+.facility-card:nth-child(4) .facility-icon {
+  color: #16a34a;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.facility-card:nth-child(4):hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+}
+
+/* Arts */
+
+.facility-card:nth-child(5) .facility-icon {
+  color: #db2777;
+  background: #fdf2f8;
+  border-color: #fbcfe8;
+}
+
+.facility-card:nth-child(5):hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #ec4899,
+    #db2777
+  );
+}
+
+/* Transport */
+
+.facility-card:nth-child(6) .facility-icon {
+  color: #d97706;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.facility-card:nth-child(6):hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #f59e0b,
+    #d97706
+  );
+}
+
+/* Internet */
+
+.facility-card:nth-child(7) .facility-icon {
+  color: #2563eb;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* Security */
+
+.facility-card:nth-child(8) .facility-icon {
+  color: #059669;
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.facility-card:nth-child(8):hover .facility-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #047857
+  );
+}
+
+/* =========================================================
+   FACILITY CONTENT
+   ========================================================= */
+
+.facility-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  font-size: 19px;
+  line-height: 1.35;
+
+  font-weight: 750;
+
+  letter-spacing: -0.3px;
+}
+
+.facility-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CAMPUS SHOWCASE
+   ========================================================= */
+
+.campus-showcase {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto 110px;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   SHOWCASE IMAGE
+   ========================================================= */
+
+.campus-showcase-image {
+  position: relative;
+
+  min-height: 480px;
+
+  border-radius: 26px;
+
+  overflow: visible;
+}
+
+/* Decorative backplate */
+
+.campus-showcase-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 22px;
+  top: 22px;
+
+  border-radius: 26px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #f59e0b
+  );
+
+  opacity: 0.18;
+
+  z-index: 0;
+}
+
+/* Image */
+
+.campus-showcase-image img {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 480px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 25px 55px rgba(15, 23, 42, 0.16);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.campus-showcase-image:hover img {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 32px 65px rgba(15, 23, 42, 0.2);
+}
+
+/* =========================================================
+   SHOWCASE CONTENT
+   ========================================================= */
+
+.campus-showcase-content {
+  position: relative;
+}
+
+.campus-showcase-content .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.campus-showcase-content .section-eyebrow::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b
+  );
+}
+
+.campus-showcase-content h2 {
+  margin: 17px 0 20px;
+
+  color: #0f172a;
+
+  font-size: clamp(34px, 4vw, 49px);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1.3px;
+}
+
+.campus-showcase-content h2 span {
+  display: inline-block;
+
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.campus-showcase-content p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+/* Small decorative line */
+
+.campus-showcase-content::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 4px;
+
+  margin-top: 30px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #fbbf24
+  );
+}
+
+/* =========================================================
+   RESPONSIVE - 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 850px;
+  }
+
+  .campus-showcase {
+    gap: 50px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .facilities-section {
+    padding: 90px 22px;
+  }
+
+  .campus-showcase {
+    grid-template-columns: 1fr;
+
+    max-width: 850px;
+
+    gap: 55px;
+
+    margin-bottom: 90px;
+  }
+
+  .campus-showcase-content {
+    text-align: center;
+  }
+
+  .campus-showcase-content .section-eyebrow {
+    justify-content: center;
+  }
+
+  .campus-showcase-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .campus-showcase-content::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .page-hero {
+    min-height: 430px;
+    padding: 75px 20px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(38px, 10vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .facilities-section {
+    padding: 75px 18px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 560px;
+
+    margin-top: 45px;
+
+    gap: 18px;
+  }
+
+  .facility-card {
+    min-height: 250px;
+
+    padding: 28px 25px;
+  }
+
+  .campus-showcase {
+    width: calc(100% - 36px);
+
+    gap: 42px;
+
+    margin-bottom: 75px;
+  }
+
+  .campus-showcase-image {
+    min-height: 380px;
+  }
+
+  .campus-showcase-image img {
+    height: 380px;
+    border-radius: 22px;
+  }
+
+  .campus-showcase-image::before {
+    left: 14px;
+    top: 14px;
+
+    border-radius: 22px;
+  }
+
+  .campus-showcase-content h2 {
+    font-size: 36px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+  .page-hero {
+    min-height: 390px;
+    padding: 65px 18px;
+  }
+
+  .page-hero > div > span {
+    padding: 8px 14px;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+
+  .page-hero p {
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+
+  .facilities-section {
+    padding: 65px 15px;
+  }
+
+  .facilities-grid {
+    margin-top: 38px;
+
+    gap: 15px;
+  }
+
+  .facility-card {
+    min-height: 235px;
+
+    padding: 25px 22px;
+
+    border-radius: 19px;
+  }
+
+  .facility-icon {
+    width: 57px;
+    height: 57px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+  }
+
+  .facility-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .facility-card h3 {
+    font-size: 18px;
+  }
+
+  .facility-card p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .campus-showcase {
+    width: calc(100% - 30px);
+
+    gap: 35px;
+
+    margin-bottom: 65px;
+  }
+
+  .campus-showcase-image {
+    min-height: 310px;
+  }
+
+  .campus-showcase-image img {
+    height: 310px;
+
+    border-radius: 19px;
+  }
+
+  .campus-showcase-image::before {
+    left: 10px;
+    top: 10px;
+
+    border-radius: 19px;
+  }
+
+  .campus-showcase-content h2 {
+    font-size: 31px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .campus-showcase-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media (max-width: 350px) {
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .facility-card {
+    padding: 23px 19px;
+  }
+
+  .campus-showcase-content h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .facility-card,
+  .facility-icon,
+  .facility-card::before,
+  .facility-card::after,
+  .campus-showcase-image img {
+    transition: none;
+  }
+
+  .facility-card:hover {
+    transform: none;
+  }
+
+  .campus-showcase-image:hover img {
+    transform: none;
+  }
+}
