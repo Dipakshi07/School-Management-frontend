@@ -144,7 +144,7 @@ const AdmissionsManagement = ({ onAdmissionUpdated }) => {
       }
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/admissions/${id}/status`,
+        `https://school-management-backend-jcoe.onrender.com/api/admin/admissions/${id}/status`,
         {
           method: "PUT",
           headers: {
